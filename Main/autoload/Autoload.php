@@ -24,7 +24,7 @@ class Autoload
 
     private function autoLoad($class_name)
     {
-        require_once $this->root_path.$class_name.'.php';
+        require_once $this->root_path.DS.$class_name.'.php';
     }
 
 

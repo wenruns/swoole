@@ -9,6 +9,33 @@
     <script src="./websocket.js"></script>
 </head>
 <body>
-
+    <div>
+        <textarea name="" id="content" cols="30" rows="10"></textarea>
+        <button onclick="sendMessage()">发送</button>
+    </div>
+    <script>
+        var socket = new myWebsocket({
+            host:'ws://127.0.0.1:9502',
+            onOpen: function (evt, handle) {
+                console.log('open...')
+                handle.send('hello，你好！')
+                handle.close();
+            },
+            onMessage: function (evt, handle) {
+                console.log('received:'+evt.data)
+            },
+            onClose:function (evt) {
+                console.log('close...')
+            },
+            onError:function (evt) {
+                console.log('error...')
+            }
+        })
+        function sendMessage() {
+            var val = document.querySelector('#content').value;
+            socket.send(val);
+            document.querySelector('#content').value = '';
+        }
+    </script>
 </body>
 </html>
