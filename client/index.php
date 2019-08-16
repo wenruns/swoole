@@ -6,7 +6,13 @@
  * Time: 17:54
  */
 
-require_once '..'.DIRECTORY_SEPARATOR.'Main'.DIRECTORY_SEPARATOR.'App.php';
-$app = new \Main\App();
-
-$swoole = $app->run();
+$app = require_once '..'.DIRECTORY_SEPARATOR.'Main'.DIRECTORY_SEPARATOR.'App.php';
+$socket_type = config('config.server_type');
+switch ($socket_type){
+    case 'server':
+        $app->setSwoole('\Main\Server');
+        break;
+    default:
+        $app->setSwoole('\Main\Websocket');
+}
+$app->run();

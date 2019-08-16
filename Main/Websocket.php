@@ -12,8 +12,9 @@ use \Swoole\Websocket\Server;
 use \Swoole\Websocket\Frame;
 use \Swoole\Http\Request;
 
-class Swoole extends SwooleBase
+class Websocket extends SwooleBase
 {
+
     public function onWorkerStart()
     {
         echo "workerStart...\r\n";
