@@ -3,8 +3,8 @@
  * Created by PhpStorm.
  * User: Administrator
  * Date: 2019/8/17
- * Time: 13:59
+ * Time: 16:48
  */
 return [
-    'client\A' => 'client\B'
+    'A' => \App\B::class
 ];

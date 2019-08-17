@@ -6,7 +6,7 @@
  * Time: 14:05
  */
 
-namespace client;
+namespace App;
 
 class B implements A
 {

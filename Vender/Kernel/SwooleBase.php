@@ -9,6 +9,8 @@
 namespace Vender\Kernel;
 
 
+use Vender\Exceptions\Exception;
+
 class SwooleBase
 {
     protected static $_container = null;
@@ -57,8 +59,26 @@ class SwooleBase
         self::$_container->getInstanceByAlias('server')->run();
     }
 
-    public function getServer()
-    {
-        return self::$_container->getInstanceByAlias('server')->getServer();
+
+    public static function stop(){
+        self::$_container->getInstanceByAlias('server')->stop();
     }
+
+    public static function make($alias_name)
+    {
+        self::checkAlias();
+        return self::$_container->getInstanceByAlias($alias_name);
+    }
+
+    public static function checkAlias()
+    {
+        $maps = config('interface_class_map');
+        foreach ($maps as $alias_name => $class_name) {
+            if ($alias_name == 'server') {
+               new Exception('server作为内核别名已被注册，请不要使用！');
+            }
+            self::$_container->bindAilas($alias_name, $class_name);
+        }
+    }
+
 }

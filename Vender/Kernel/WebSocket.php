@@ -52,4 +52,10 @@ class WebSocket extends Common
         // TODO: Implement run() method.
         self::$_server->start();
     }
+
+    public function stop()
+    {
+        // TODO: Implement stop() method.
+        self::$_server->shutdown();
+    }
 }

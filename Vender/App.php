@@ -15,7 +15,7 @@ class App
     protected $_options = [];
     public function __construct()
     {
-        require_once __DIR__ .DIRECTORY_SEPARATOR.'Autoload.php';
+        require_once __DIR__ . DIRECTORY_SEPARATOR . 'Autoload.php';
 
         $this->_swoole_class = '\Vender\Websocket';
     }

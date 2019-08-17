@@ -9,7 +9,7 @@
 namespace Vender\Kernel;
 
 
-use Main\controllers\others\Exception;
+use Vender\Exceptions\Exception;
 
 abstract class Common
 {
@@ -50,6 +50,8 @@ abstract class Common
     abstract public function getServer();
 
     abstract public function run();
+
+    abstract public function stop();
 
     static public function getSwooleType($swoole_type = '')
     {

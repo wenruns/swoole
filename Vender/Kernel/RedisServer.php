@@ -30,4 +30,9 @@ class RedisServer extends Common
     {
         // TODO: Implement run() method.
     }
+
+    public function stop()
+    {
+        // TODO: Implement stop() method.
+    }
 }

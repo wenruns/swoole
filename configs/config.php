@@ -7,11 +7,12 @@
  */
 
 return [
+    'env' => 'local',
     'host' => '0.0.0.0',
     'port' => 9502,
     'swoole_type' => 'SWOOLE_BASE',
     'protocol' => 'SWOOLE_SOCK_TCP',
-    'server_type' => 'websocket',
+    'server_type' => 'http_server',
     'options' => [
         'backlog' => 128,   //listen backlog
         'worker_num' => 4, //指定启动的worker进程数。

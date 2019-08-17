@@ -6,7 +6,7 @@
  * Time: 14:03
  */
 
-namespace client;
+namespace App;
 
 interface A
 {
