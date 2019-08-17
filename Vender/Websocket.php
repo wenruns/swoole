@@ -5,9 +5,9 @@
  * Date: 2019/8/14
  * Time: 16:58
  */
-namespace Main;
+namespace Vender;
 
-use \Main\controllers\SwooleBase;
+use \Vender\Kernel\SwooleBase;
 use \Swoole\Websocket\Server;
 use \Swoole\Websocket\Frame;
 use \Swoole\Http\Request;
@@ -20,27 +20,55 @@ class Websocket extends SwooleBase
         echo "workerStart...\r\n";
     }
 
+    /**
+     * @param Server $server
+     * @param Request $request
+     * 连接成功
+     */
     public function onOpen(Server $server, Request $request)
     {
+        echo "open...\r\n";
     }
 
+
+    /**
+     * @param $request
+     * @param $response
+     * 接收http请求
+     */
     public function onRequest($request, $response)
     {
+        echo "request...\r\n";
     }
 
 
+    /**
+     * @param Server $server
+     * @param Frame $frame
+     * 接收消息
+     */
     public function onMessage(Server $server, Frame $frame)
     {
+        echo "message...[".$frame->data."]\r\n";
         if($server->isEstablished($frame->fd)){
             $server->push($frame->fd, $frame->data);
         }
     }
 
+    /**
+     * @param Server $server
+     * @param int $fd
+     * @param int $reactorId
+     * 关闭连接
+     */
     public function onClose(Server $server, int $fd, int $reactorId)
     {
         echo "close...\r\n";
     }
 
+    /**
+     * 自定义握手操作
+     */
 //    public function onHandshake(\swoole_http_request $request, \swoole_http_response $response)
 //    {
 //        echo "handshake...\r\n";

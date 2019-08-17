@@ -6,7 +6,7 @@
  * Time: 17:06
  */
 
-namespace Main\controllers;
+namespace Vender\Kernel;
 
 
 class Container

@@ -6,7 +6,7 @@
  * Time: 17:39
  * 异常处理
  */
-namespace Main\controllers\others;
+namespace Vender\Exceptions;
 
 
 class Exception

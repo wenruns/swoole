@@ -6,11 +6,17 @@
  * Time: 16:04
  */
 
-namespace Main\controllers;
+namespace Vender\Kernel;
 
 
 class HttpServer extends Common
 {
+
+    public function init($configs)
+    {
+        // TODO: Implement init() method.
+    }
+
     public function registerEvent($event, $func)
     {
         // TODO: Implement registerEvent() method.

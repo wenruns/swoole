@@ -1,7 +1,7 @@
 <?php
-namespace Main;
+namespace Vender;
 
-use \Main\controllers\SwooleBase;
+use \Vender\Kernel\SwooleBase;
 use \Swoole\Server as SwooleServer;
 
 class Server extends SwooleBase

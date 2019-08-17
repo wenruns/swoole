@@ -6,7 +6,7 @@
  * Time: 17:20
  * 环境监测
  */
-namespace Main\controllers\others;
+namespace Vender\Others;
 
 class Machine
 {

@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="./websocket.js"></script>
+    <script src="websocket.js"></script>
 </head>
 <body>
     <div>
@@ -18,8 +18,8 @@
             host:'ws://127.0.0.1:9502',
             onOpen: function (evt, handle) {
                 console.log('open...')
-                handle.send('hello，你好！')
-                handle.close();
+                // handle.send('hello，你好！')
+                // handle.close();
             },
             onMessage: function (evt, handle) {
                 console.log('received:'+evt.data)

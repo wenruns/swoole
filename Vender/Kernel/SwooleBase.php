@@ -6,7 +6,7 @@
  * Time: 15:55
  */
 
-namespace Main\controllers;
+namespace Vender\Kernel;
 
 
 class SwooleBase
@@ -15,26 +15,26 @@ class SwooleBase
 
     protected static $_events = [];
 
-    function __construct()
+    function __construct($options = [])
     {
         self::$_container = new Container();
-        $configs = config('config');
+        $server_type = isset($options['server_type']) ? $options['server_type'] : config('config.server_type');
 
-        switch (strtolower($configs['server_type'])) {
+        switch (strtolower($server_type)) {
             case 'websocket':
-                self::$_container->bind('websocket', new WebSocket());
+                self::$_container->bind('websocket', new WebSocket($options));
                 self::$_container->bindAilas('server', 'websocket');
                 break;
             case 'http_server':
-                self::$_container->bind('http_server', new HttpServer());
+                self::$_container->bind('http_server', new HttpServer($options));
                 self::$_container->bindAilas('server', 'http_server');
                 break;
             case 'redis_server':
-                self::$_container->bind('redis_server', new RedisServer());
+                self::$_container->bind('redis_server', new RedisServer($options));
                 self::$_container->bindAilas('server', 'redis_server');
                 break;
             default:
-                self::$_container->bind('server', new Server());
+                self::$_container->bind('server', new Server($options));
                 self::$_container->bindAilas('server', 'server');
         }
         $this->registerEvents();

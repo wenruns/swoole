@@ -6,11 +6,16 @@
  * Time: 16:10
  */
 
-namespace Main\controllers;
+namespace Vender\Kernel;
 
 
 class RedisServer extends Common
 {
+    public function init($configs)
+    {
+        // TODO: Implement init() method.
+    }
+
     public function registerEvent($event, $func)
     {
         // TODO: Implement registerEvent() method.

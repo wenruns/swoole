@@ -6,13 +6,15 @@
  * Time: 17:03
  */
 
-namespace Main\controllers;
+namespace Vender\Kernel;
 
 
 use Main\controllers\others\Exception;
 
 abstract class Common
 {
+    protected static $configs = [];
+
     protected static $_SWOOLE_TYPE = [
         'SWOOLE_PROCESS' => SWOOLE_PROCESS,
         'SWOOLE_BASE' => SWOOLE_BASE
@@ -28,6 +30,20 @@ abstract class Common
         'SWOOLE_SOCK_SYNC' => SWOOLE_SOCK_SYNC,
         'SWOOLE_SOCK_ASYNC' => SWOOLE_SOCK_ASYNC,
     ];
+
+    public function __construct($configs = [])
+    {
+        self::$configs = config('config', [
+            'host' => '0.0.0.0',
+            'port' => 9502,
+            'swoole_type' => 'SWOOLE_PROCESS',
+            'protocol' => 'SWOOLE_SOCK_TCP',
+        ]);
+        self::$configs = array_merge(self::$configs, $configs);
+        $this->init(self::$configs);
+    }
+
+    abstract public function init($configs);
 
     abstract public function registerEvent($event, $func);
 

@@ -7,14 +7,10 @@
  */
 class Autoload
 {
-    private $root_path = '';
-
-    protected static $container = null;
 
     public function __construct()
     {
-        require_once __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'common'.DIRECTORY_SEPARATOR.'func.php';
-        $this->root_path = VENDER_ROOT;
+        require_once __DIR__ . DIRECTORY_SEPARATOR . 'Common' . DIRECTORY_SEPARATOR . 'func.php';
     }
 
     public function register()
@@ -24,11 +20,11 @@ class Autoload
 
     private function autoLoad($class_name)
     {
-        require_once $this->root_path.DS.$class_name.'.php';
+        require_once ROOT_PATH.DS.$class_name.'.php';
     }
-
 
 }
 
 $autoload = new Autoload();
 $autoload->register();
+return $autoload;
