@@ -7,9 +7,9 @@
     </div>
     <van-tabbar v-model="active">
       <van-tabbar-item icon="home-o">首页</van-tabbar-item>
-      <van-tabbar-item icon="search">搜索</van-tabbar-item>
-      <van-tabbar-item icon="setting-o">设置</van-tabbar-item>
-      <van-tabbar-item icon="friends-o">好友</van-tabbar-item>
+      <van-tabbar-item icon="balance-list-o">接单</van-tabbar-item>
+      <van-tabbar-item icon="shopping-cart-o">成品</van-tabbar-item>
+      <van-tabbar-item icon="friends-o">我的</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
