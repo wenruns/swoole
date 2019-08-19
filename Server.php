@@ -8,7 +8,10 @@
 
 $app = require_once 'Vender' . DIRECTORY_SEPARATOR . 'App.php';
 
-$app->setServer('\Vender\HttpServer');
+
+
+$app->setServer('\Vender\Websocket');
+
 
 $app->run();
 

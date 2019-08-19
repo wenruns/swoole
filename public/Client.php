@@ -10,3 +10,5 @@ if (!$client->connect('127.0.0.1', 9501, -1))
 $client->send("hello world\n");
 echo $client->recv();
 $client->close();
+
+//function

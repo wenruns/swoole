@@ -12,7 +12,7 @@ return [
     'port' => 9502,
     'swoole_type' => 'SWOOLE_BASE',
     'protocol' => 'SWOOLE_SOCK_TCP',
-    'server_type' => 'http_server',
+    'server_type' => 'websocket',
     'options' => [
         'backlog' => 128,   //listen backlog
         'worker_num' => 4, //指定启动的worker进程数。
@@ -26,3 +26,4 @@ return [
 //        'heartbeat_idle_time' => 1200, //设置某个连接允许的最大闲置时间。
     ]
 ];
+
