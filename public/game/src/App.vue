@@ -10,6 +10,7 @@
         <van-tabbar-item :to="item.path" :icon="item.icon">{{item.text}}</van-tabbar-item>
       </template>
     </van-tabbar>
+
   </div>
 </template>
 
@@ -159,6 +160,11 @@ export default {
 
   .van-tabbar-item__icon .van-icon{
     font-size: 5vw !important;
+  }
+
+  .van-notice-bar__wrap,.van-notice-bar{
+    height: 10vw !important;
+    line-height: 10vw !important;
   }
 
 </style>

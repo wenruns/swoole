@@ -2,22 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d26fe3eb-5ac3-48a7-8dab-f78dc369f38f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/vue/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vue/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vue/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vue/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vue/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vue/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vue/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vue/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vue/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vue/src/components/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vue/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vue/src/router/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vue/src/components/center.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vue/src/components/order.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vue/src/components/prod.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vue/src/components/seconds/merchant.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vue/src/components/seconds/navbar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vue/src/components/seconds/technician.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vender/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vender/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/vue/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/vue/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vue/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/vue/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/vue/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vue/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/public/vue/src/components/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vue/src/router/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vue/src/router/router.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,67 +26,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/vue/src/router/router.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/game/src/components/home.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+            <state relative-caret-position="270">
+              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="n#style#0;n#van-swipe#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/vue/src/components/HelloWorld.vue">
+        <entry file="file://$PROJECT_DIR$/public/game/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/vue/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/vue/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="419">
-                <caret line="29" selection-start-line="29" selection-end-line="29" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/vue/src/App.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/vue/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/vue/babel.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state relative-caret-position="645">
+              <caret line="167" selection-start-line="167" selection-end-line="167" />
             </state>
           </provider>
         </entry>
@@ -98,6 +53,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -105,30 +61,19 @@
     <findStrings>
       <find>test.data</find>
       <find>style=&quot;list-style: none;&quot;</find>
+      <find>onAbort(err)</find>
     </findStrings>
     <dirStrings>
       <dir>D:\wens\cygWin\home\App\swoole-service</dir>
+      <dir>D:\wens\cygWin\home\App\swoole-service\public\vue</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/public/game" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Main/configs/config.php" />
-        <option value="$PROJECT_DIR$/Main/controllers/RedisServer.php" />
-        <option value="$PROJECT_DIR$/Main/controllers/HttpServer.php" />
-        <option value="$PROJECT_DIR$/Main/controllers/Server.php" />
-        <option value="$PROJECT_DIR$/Main/controllers/WebSocket.php" />
-        <option value="$PROJECT_DIR$/Main/controllers/Common.php" />
-        <option value="$PROJECT_DIR$/client/websocket.js" />
-        <option value="$PROJECT_DIR$/client/client.html" />
-        <option value="$PROJECT_DIR$/Main/Websocket.php" />
-        <option value="$PROJECT_DIR$/Main/controllers/Coroutine.php" />
-        <option value="$PROJECT_DIR$/Main/controllers/Extension/Coroutine.php" />
-        <option value="$PROJECT_DIR$/client/A.php" />
-        <option value="$PROJECT_DIR$/client/B.php" />
         <option value="$PROJECT_DIR$/Main/configs/map.php" />
         <option value="$PROJECT_DIR$/Main/autoload/Autoload.php" />
         <option value="$PROJECT_DIR$/Main/controllers/SwooleBase.php" />
@@ -147,7 +92,6 @@
         <option value="$PROJECT_DIR$/App.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/Vender/Kernel/Container.php" />
-        <option value="$PROJECT_DIR$/Vender/App.php" />
         <option value="$PROJECT_DIR$/Vender/Kernel/Common.php" />
         <option value="$PROJECT_DIR$/Vender/Kernel/WebSocket.php" />
         <option value="$PROJECT_DIR$/Vender/Kernel/HttpServer.php" />
@@ -163,10 +107,24 @@
         <option value="$PROJECT_DIR$/Server.php" />
         <option value="$PROJECT_DIR$/configs/config.php" />
         <option value="$PROJECT_DIR$/public/vue/src/main.js" />
-        <option value="$PROJECT_DIR$/public/vue/src/router/router.js" />
-        <option value="$PROJECT_DIR$/public/vue/src/components/HelloWorld.vue" />
         <option value="$PROJECT_DIR$/public/vue/babel.config.js" />
+        <option value="$PROJECT_DIR$/public/vue/src/components/HelloWorld.vue" />
+        <option value="$PROJECT_DIR$/public/vue/src/components/sales.vue" />
+        <option value="$PROJECT_DIR$/public/vue/src/router/router.js" />
+        <option value="$PROJECT_DIR$/public/vue/src/components/seconds/Technician.vue" />
+        <option value="$PROJECT_DIR$/public/vue/src/components/seconds/technician.vue" />
+        <option value="$PROJECT_DIR$/public/vue/node_modules/vue-router/dist/vue-router.esm.js" />
+        <option value="$PROJECT_DIR$/public/vue/src/components/seconds/navbar.vue" />
+        <option value="$PROJECT_DIR$/public/vue/public/index.html" />
         <option value="$PROJECT_DIR$/public/vue/src/App.vue" />
+        <option value="$PROJECT_DIR$/public/vue/src/components/center.vue" />
+        <option value="$PROJECT_DIR$/public/vue/src/components/order.vue" />
+        <option value="$PROJECT_DIR$/public/vue/src/components/prod.vue" />
+        <option value="$PROJECT_DIR$/Vender/App.php" />
+        <option value="$PROJECT_DIR$/public/vue/src/components/seconds/merchant.vue" />
+        <option value="$PROJECT_DIR$/public/vue/src/components/home.vue" />
+        <option value="$PROJECT_DIR$/public/game/src/App.vue" />
+        <option value="$PROJECT_DIR$/public/game/src/components/home.vue" />
       </list>
     </option>
   </component>
@@ -208,20 +166,20 @@
               <item name="swoole-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="swoole-service" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="swoole-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="swoole-service" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="swoole-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="swoole-service" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -229,9 +187,10 @@
               <item name="swoole-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="swoole-service" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="vue" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="seconds" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="swoole-service" type="b2602c69:ProjectViewProjectNode" />
@@ -309,18 +268,18 @@
       <workItem from="1565829451843" duration="28084000" />
       <workItem from="1565915888701" duration="23704000" />
       <workItem from="1566008245644" duration="21121000" />
-      <workItem from="1566174354807" duration="12659000" />
+      <workItem from="1566174354807" duration="13328000" />
+      <workItem from="1566261269700" duration="18372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126430000" />
+    <option name="totallyTimeSpent" value="145471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15298508" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15458423" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -333,7 +292,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.32827735" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -345,17 +304,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Main/client/A.php" />
-    <entry file="file://$PROJECT_DIR$/Main/client/B.php" />
-    <entry file="file://$PROJECT_DIR$/Main/configs/map.php" />
-    <entry file="file://$PROJECT_DIR$/Main/Vender/Kernel/WebSocket.php" />
-    <entry file="file://$PROJECT_DIR$/Main/Websocket.php" />
-    <entry file="file://$PROJECT_DIR$/Main/Server.php" />
-    <entry file="file://$PROJECT_DIR$/Main/Vender/Kernel/SwooleBase.php" />
-    <entry file="file://$PROJECT_DIR$/Main/Vender/Kernel/Server.php" />
-    <entry file="file://$PROJECT_DIR$/Main/Vender/Kernel/RedisServer.php" />
-    <entry file="file://$PROJECT_DIR$/Main/Vender/Kernel/HttpServer.php" />
-    <entry file="file://$PROJECT_DIR$/Main/Vender/Kernel/Container.php" />
     <entry file="file://$PROJECT_DIR$/Main/client/index.php" />
     <entry file="file://$PROJECT_DIR$/Main/Vender/Kernel/Common.php" />
     <entry file="file://$PROJECT_DIR$/Main/Vender/Exceptions/Exception.php" />
@@ -446,33 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vender/HttpServer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-          <folding>
-            <element signature="e#116#145#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vender/Autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vender/Server.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="12" />
-          <folding>
-            <element signature="e#25#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/interface_class_map.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -515,33 +436,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vender/Websocket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1375">
-          <caret line="72" column="34" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="34" />
-          <folding>
-            <element signature="e#114#144#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/vue/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/vue/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="419">
+          <first_editor relative-caret-position="725">
             <caret line="29" selection-start-line="29" selection-end-line="29" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/vue/babel.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -552,51 +453,172 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vender/App.php">
+    <entry file="file://$PROJECT_DIR$/public/vue/babel.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="30" />
+        <state relative-caret-position="250">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configs/config.php">
+    <entry file="file://$PROJECT_DIR$/public/vue/src/components/seconds/technician.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="50">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/vue/src/main.js">
+    <entry file="file://$PROJECT_DIR$/public/vue/src/components/seconds/navbar.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="370">
+          <caret line="87" column="37" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/vue/src/router/router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        <state relative-caret-position="345">
+          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/vue/src/components/HelloWorld.vue">
+    <entry file="file://$PROJECT_DIR$/public/vue/src/components/center.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="375">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vue/src/components/order.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vue/src/components/prod.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vue/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="90" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vender/Websocket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="72" column="34" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="34" />
+          <folding>
+            <element signature="e#114#144#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vender/Server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="12" />
+          <folding>
+            <element signature="e#25#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vender/HttpServer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <element signature="e#116#145#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vender/Autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vue/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1500" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vue/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vender/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vue/public/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vue/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/vue/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        <state relative-caret-position="-1955">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vue/src/components/seconds/merchant.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vue/src/components/home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="3" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/game/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="167" selection-start-line="167" selection-end-line="167" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/game/src/components/home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#van-swipe#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

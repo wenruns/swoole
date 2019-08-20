@@ -34,6 +34,7 @@ class App
     {
         return new $this->_swoole_class($this->_options);
     }
+
 }
 
 return new App();
