@@ -6,9 +6,7 @@
       </transition>
     </div>
     <van-tabbar v-model="active" v-if="show_tabbar" safe-area-inset-bottom @change="tabbarChange">
-      <template v-for="item in tabbar">
-        <van-tabbar-item :to="item.path" :icon="item.icon">{{item.text}}</van-tabbar-item>
-      </template>
+        <van-tabbar-item v-for="(item, index) in tabbar" v-bind:key="index" :to="item.path" :icon="item.icon">{{item.text}}</van-tabbar-item>
     </van-tabbar>
 
   </div>
@@ -58,7 +56,7 @@ export default {
     }
   },
   methods:{
-    tabbarChange(index){
+    tabbarChange(){
       localStorage.setItem('tabbar-active', this.active)
     }
   },
@@ -75,13 +73,17 @@ export default {
 </script>
 
 <style>
-  *{
-    font-size: 4vw !important;
-  }
+    *{
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        border-spacing: 0px;
+        font-size: 4vw;
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
     height: 100vh;
@@ -154,6 +156,9 @@ export default {
     padding-bottom: 13vw;
   }
 
+  .align-left{
+    text-align: left;
+  }
   .van-tabbar{
     height: 13vw;
   }
@@ -167,4 +172,10 @@ export default {
     line-height: 10vw !important;
   }
 
+  .van-cell{
+    line-height: 6vw !important;
+  }
+  .van-cell__left-icon, .van-cell__right-icon{
+    font-size: 4vw;
+  }
 </style>

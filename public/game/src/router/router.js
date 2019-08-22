@@ -24,7 +24,7 @@ export default new VueRouter({
             path: "/prod",
             name: "prod",
             meta: {
-                index: 3,
+                index: 2,
             },
             component: () => import('@/components/prod')
         },

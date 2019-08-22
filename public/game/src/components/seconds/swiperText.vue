@@ -2,7 +2,7 @@
     <div class="swipe-text-box">
         <ul :style="'height: '+height+';'">
             <template v-for="(item, index) in options">
-                <li :class="class_name" :style="'height: '+li_height(0)+';line-height:' + li_height(0)+';top:'+(li_height(1)*(index))+li_height(2)+';'+item.style" :data-index="index" :data-flag="index">
+                <li v-bind:key="index" :class="class_name" :style="'height: '+li_height(0)+';line-height:' + li_height(0)+';top:'+(li_height(1)*(index))+li_height(2)+';'+item.style" :data-index="index" :data-flag="index">
                     <span :style="item.left.style">{{item.left.text}}</span>
                     <span :style="item.center.style">{{item.center.text}}</span>
                     <span :style="item.right.style">{{item.right.text}}</span>
@@ -123,8 +123,8 @@
                     // document.title='页面非激活';
                 }
             });
-            lis.forEach(function (item, index) {
-                item.addEventListener('transitionend', function (e) {
+            lis.forEach(function (item) {
+                item.addEventListener('transitionend', function () {
                     if(item.dataset.flag == (_this.row)){
                         item.style.transition = '';
                         item.style.top = (Number(this.dataset.flag)) * _this.li_height(1) + _this.li_height(2);
@@ -138,9 +138,9 @@
 
                 })
             })
-            this.handle = setInterval(function (e) {
+            this.handle = setInterval(function () {
                 if(_this.windowIsOnFocus){
-                        lis.forEach(function (item, index) {
+                        lis.forEach(function (item) {
                         item.style.transition = 'all '+_this.speed+'ms';
                         item.style.top = _this.li_height(1)*(item.dataset.flag-1)+_this.li_height(2);
                         item.dataset.flag--;

@@ -22,7 +22,7 @@
                     <div class="one-game-left one-game-info">
                         <div class="game-name-box">大富科技</div>
                         <div class="game-tips-box">距离下次开奖剩余</div>
-                        <div class="game-time-box">12:12</div>
+                        <div class="game-time-box">{{timeCount(next_time.game1, 1)}}</div>
                     </div>
                     <div class="one-game-right"></div>
                 </div>
@@ -31,7 +31,7 @@
                     <div class="one-game-right one-game-info">
                         <div class="game-name-box">卓翼科技</div>
                         <div class="game-tips-box">等待开奖中</div>
-                        <div class="game-time-box">{{timeCount()}}:12</div>
+                        <div class="game-time-box">{{timeCount(next_time.game2, 1)}}</div>
                     </div>
                 </div>
             </div>
@@ -132,11 +132,24 @@
                 next_time: {
                     game1: 123,
                     game2: 1234
-                }
+                },
+                handle: null,
             }
         },
         created(){
             this.timeCount(133);
+            let _this = this;
+            this.handle = setInterval(function () {
+                if(_this.next_time.game1){
+                    _this.next_time.game1--;
+                }
+                if(_this.next_time.game2){
+                    _this.next_time.game2--;
+                }
+            }, 1000)
+        },
+        beforeDestroy(){
+            clearInterval(this.handle)
         },
         methods:{
             toGame1(){
@@ -148,14 +161,16 @@
             timeCount(time, flag=0){
                 if(flag == 0){
                     let h = Math.floor(time/3600);
-                    return h;
+                    let m = Math.floor((time%3600)/60);
+                    let s = (time%3600)%60;
+                    return h + ':' + m + ':' + s;
                 }
-                let m = Math.floor(time/60);
                 if(flag == 1){
-                    return m;
+                    let m = Math.floor(time/60);
+                    let s = time%60;
+                    return m + ':' + s;
                 }
-                let s = (time%3600)%60;
-                return s;
+                return time;
             }
         },
         computed:{
