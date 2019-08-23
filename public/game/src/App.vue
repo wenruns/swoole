@@ -29,17 +29,17 @@ export default {
         {
           path: '/',
           icon: 'home-o',
-          text: '首页'
+          text: '主页'
         },
         {
           path: '/order',
-          icon: 'balance-list-o',
-          text: '接单'
+          icon: 'balance-o',
+          text: '充值'
         },
         {
           path: '/prod',
-          icon: 'shopping-cart-o',
-          text: '成品'
+          icon: 'service-o',
+          text: '客服'
         },
         {
           path: '/center',

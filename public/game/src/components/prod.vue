@@ -1,6 +1,12 @@
 <template>
     <div class="content-box bottom13">
-        prod
+        <div class="header">
+            <div class=""></div>
+
+        </div>
+        <div>
+
+        </div>
     </div>
 </template>
 
