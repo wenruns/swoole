@@ -33,7 +33,7 @@
             <van-field v-if="payType=='银联充值'" label="使用新卡支付" is-link readonly label-width="25vw" @click="clickRight"></van-field>
             <van-field v-else placeholder="请输入用户名" label="用户名" label-class="align-left" label-width="25vw"></van-field>
             <van-field placeholder="请输入ID账号" label="备注" label-class="align-left" label-width="25vw"></van-field>
-            <button class="submit-btn">提交</button>
+            <button :class="'submit-btn btn' + id">提交</button>
         </div>
     </div>
 </template>
@@ -50,7 +50,8 @@
         },
         data(){
             return {
-                holder: '支付宝信息'
+                holder: '支付宝信息',
+                id: '',
             }
         },
         components: {
@@ -73,12 +74,15 @@
                 default:
                     this.holder = '支付宝信息'
             }
-            document.querySelector('.submit-btn').addEventListener('touchstart',function (e) {
-                e.target.classList.add('submit-btn-active');
-            })
-            document.querySelector('.submit-btn').addEventListener('touchend',function (e) {
-                e.target.classList.remove('submit-btn-active');
-            })
+            this.id = Math.round(Math.random()*1000);
+            this.$nextTick(function () {
+                document.querySelector('.btn'+this.id).addEventListener('touchstart',function (e) {
+                    e.target.classList.add('submit-btn-active');
+                })
+                document.querySelector('.btn'+this.id).addEventListener('touchend',function (e) {
+                    e.target.classList.remove('submit-btn-active');
+                })
+            });
         },
         methods:{
             clickRight(){

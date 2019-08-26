@@ -64,7 +64,7 @@
 
 <style scoped>
     .header-box{
-        height: 55vw;
+        height: 60vw;
         background-image: url("../assets/bj1.jpg");
         background-size: 100% 100%;
         position: relative;
@@ -74,9 +74,17 @@
         height: 16vw;
         line-height: 26vw;
     }
+    .user-name{
+        margin-top: 1vw;
+    }
+    .user-name,.user-ID{
+        color: white;
+        line-height: 6vw;
+    }
+
     .remain-box{
         position: absolute;
-        top: 47vw;
+        top: 85%;
         width: 92vw;
         left: 4vw;
         height: 15vw;
@@ -98,6 +106,7 @@
         color: #C9C7C8;
         font-size: 3.7vw;
     }
+
     .grid-box{
         padding-top: 10vw;
     }
