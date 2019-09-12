@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="grid-box">
-            <grid></grid>
+            <grid :options="grid_options"></grid>
         </div>
     </div>
 </template>
@@ -54,7 +54,44 @@
         },
         data(){
             return {
-
+				grid_options: [
+					{
+						icon: 'https://img.tukuppt.com//png_preview/00/12/74/AV16X5bTXi.jpg!/fw/780',
+						text: '活动大厅',
+						to: '',
+						url: 'http://www.baidu.com',
+					},
+					{
+						icon: 'https://img.tukuppt.com//png_preview/00/12/74/AV16X5bTXi.jpg!/fw/780',
+						text: '消息中心',
+						to: '',
+						url: 'http://www.baidu.com',
+					},
+					{
+						icon: 'https://img.tukuppt.com//png_preview/00/12/74/AV16X5bTXi.jpg!/fw/780',
+						text: '账单明细',
+						to: '',
+						url: 'http://www.baidu.com',
+					},
+					{
+						icon: 'https://img.tukuppt.com//png_preview/00/12/74/AV16X5bTXi.jpg!/fw/780',
+						text: '我要分享',
+						to: '',
+						url: 'http://www.baidu.com',
+					},
+					{
+						icon: 'https://img.tukuppt.com//png_preview/00/12/74/AV16X5bTXi.jpg!/fw/780',
+						text: '关于我们',
+						to: '',
+						url: 'http://www.baidu.com',
+					},
+					{
+						icon: 'https://img.tukuppt.com//png_preview/00/12/74/AV16X5bTXi.jpg!/fw/780',
+						text: '推出登录',
+						to: '',
+						url: 'http://www.baidu.com',
+					}
+				]
             }
         },
         beforeCreate() {

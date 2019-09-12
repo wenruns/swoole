@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div class="main">
-      <transition :name="transitionName">
-        <router-view></router-view>
-      </transition>
-    </div>
+	<div class="main">
+	  <transition :name="transitionName">
+	    <router-view></router-view>
+	  </transition>
+	</div>
     <van-tabbar v-model="active" v-if="show_tabbar" safe-area-inset-bottom @change="tabbarChange">
       <template v-for="item in tabbar">
         <van-tabbar-item :to="item.path" :icon="item.icon">{{item.text}}</van-tabbar-item>
@@ -35,7 +35,7 @@ export default {
         {
           path: '/order',
           icon: 'balance-list-o',
-          text: '接单'
+          text: '接单'  
         },
         {
           path: '/prod',
@@ -57,6 +57,12 @@ export default {
     }
   },
   methods:{
+	swiperleft(){
+		this.$router.push({path:"/"});
+	},
+	swiperright(){
+		this.$router.push({path: 'center'});
+	},
     tabbarChange(index){
       localStorage.setItem('tabbar-active', this.active)
     }

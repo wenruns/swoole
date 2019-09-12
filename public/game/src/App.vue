@@ -6,7 +6,7 @@
       </transition>
     </div>
     <van-tabbar v-model="active" v-if="show_tabbar" safe-area-inset-bottom @change="tabbarChange">
-        <van-tabbar-item v-for="(item, index) in tabbar" v-bind:key="index" :to="item.path" :icon="item.icon">{{item.text}}</van-tabbar-item>
+        <van-tabbar-item v-for="(item, index) in tabbar" :to="item.path" v-bind:key="index" :icon="item.icon">{{item.text}}</van-tabbar-item>
     </van-tabbar>
 
   </div>
@@ -49,11 +49,14 @@ export default {
       ]
     }
   },
-  created(){
-    let active = localStorage.getItem('tabbar-active');
-    if(active){
-      this.active = Number(active);
-    }
+  mounted(){
+    this.$nextTick(function(){
+		let active = localStorage.getItem('tabbar-active');
+		if(active){
+		  this.active = Number(active);
+		  this.$router.push(this.tabbar[active].path);
+		}
+	});
   },
   methods:{
     tabbarChange(){

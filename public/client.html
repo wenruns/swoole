@@ -7,22 +7,62 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="websocket.js"></script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .chat-content-box{
+            width: 50%;
+            margin: auto;
+            border: 1px solid red;
+            height: 30vw;
+            overflow: auto;
+        }
+        .send-box{
+            width: 50%;
+            margin: auto;
+            display: flex;
+        }
+        #content-box{
+            width: 90%;
+            resize: none;
+        }
+        .send-btn{
+            width: 10%;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <textarea name="" id="content" cols="30" rows="10"></textarea>
-        <button onclick="sendMessage()">发送</button>
+    <div class="chat-room-box">
+        <div class="chat-content-box"></div>
+        <div class="send-box">
+            <textarea name="" id="content-box" cols="30" rows="2"></textarea>
+            <button class="send-btn" onclick="sendMessage()">发送</button>
+        </div>
     </div>
     <script>
+        let id = Math.round(Math.random() * 100);
         var socket = new myWebsocket({
             host:'ws://127.0.0.1:9502',
             onOpen: function (evt, handle) {
                 console.log('open...')
-                // handle.send('hello，你好！')
-                // handle.close();
+                handle.send({
+                    id: id,
+                    name: '游客'+id,
+                    type: 'hello'
+                })
+                handle.send({
+                    id: id,
+                    type: 'chatRoom',
+                    msg: '欢迎“游客'+id+'”进入聊天室'
+                });
             },
             onMessage: function (evt, handle) {
-                console.log('received:'+evt.data)
+                let res = JSON.parse(evt.data);
+                console.log('received:', res)
+                let html = '<p>'+res.data+'</p>';
+                document.querySelector('.chat-content-box').innerHTML += html;
             },
             onClose:function (evt) {
                 console.log('close...')
@@ -31,10 +71,17 @@
                 console.log('error...')
             }
         })
+
         function sendMessage() {
-            var val = document.querySelector('#content').value;
-            socket.send(val);
-            document.querySelector('#content').value = '';
+            let val = document.querySelector('#content-box').value;
+            socket.send({
+                id: id,
+                type: 'chatRoom',
+                msg: val,
+            });
+            document.querySelector('#content-box').value = '';
+            let html = '<p style="text-align: right;">'+val+'</p>'
+            document.querySelector('.chat-content-box').innerHTML += html;
         }
     </script>
 </body>

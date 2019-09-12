@@ -1,13 +1,11 @@
 <template>
     <div class="swipe-text-box">
         <ul :style="'height: '+height+';'">
-            <template v-for="(item, index) in options">
-                <li v-bind:key="index" :class="class_name" :style="'height: '+li_height(0)+';line-height:' + li_height(0)+';top:'+(li_height(1)*(index))+li_height(2)+';'+item.style" :data-index="index" :data-flag="index">
-                    <span :style="item.left.style">{{item.left.text}}</span>
-                    <span :style="item.center.style">{{item.center.text}}</span>
-                    <span :style="item.right.style">{{item.right.text}}</span>
-                </li>
-            </template>
+			<li v-for="(item, index) in options" v-bind:key="index" :class="class_name" :style="'height: '+li_height(0)+';line-height:' + li_height(0)+';top:'+(li_height(1)*(index))+li_height(2)+';'+item.style" :data-index="index" :data-flag="index">
+			    <span :style="item.left.style">{{item.left.text}}</span>
+			    <span :style="item.center.style">{{item.center.text}}</span>
+			    <span :style="item.right.style">{{item.right.text}}</span>
+			</li>
         </ul>
     </div>
 </template>

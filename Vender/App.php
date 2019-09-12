@@ -10,31 +10,22 @@ namespace Vender;
 
 class App
 {
-    protected $_swoole_class = null;
     // 用户自定义配置
     protected $_options = [];
     public function __construct()
     {
         require_once __DIR__ . DIRECTORY_SEPARATOR . 'Autoload.php';
-
-        $this->_swoole_class = '\Vender\Websocket';
-    }
-
-    public function setServer($server_class)
-    {
-        $this->_swoole_class = $server_class;
-    }
-
-    public function setConfigs($options)
-    {
-        $this->_options = $options;
+        $this->_options = array_merge(config('config'), empty(config('app')) ? [] : config('app'));
     }
 
     public function run()
     {
-        return new $this->_swoole_class($this->_options);
+        $server_controller = config('app.server_controller');
+        if(!$server_controller){
+            $server_controller = config('config.server_controller');
+        }
+        return new $server_controller($this->_options);
     }
-
 }
 
 return new App();

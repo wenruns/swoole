@@ -7,7 +7,7 @@
  */
 require_once 'const.php';
 
-function dump($var){
+function dump($var, $_stdout = false){
     $unique = mt_rand();
     $str = '<!doctype html>
 <html lang="en">
@@ -103,6 +103,9 @@ function dump($var){
     </script>
 </body>
 </html>';
+    if(!$_stdout){
+        return $str;
+    }
     echo $str;
 }
 
@@ -126,13 +129,45 @@ function makeLi($var, $key, $unique){
                     <span>}</span>
                 </li>';
     }elseif(gettype($var) == 'object'){
+        $methods = get_class_methods($var);
+        $properties = get_class_vars(get_class($var));
         $str = '<li>
                 <span class="icon'.$unique.'" data-icon="-"></span>
                 <span class="type-box">[object('.count((array)$var).')]</span>
-                <span>'.get_class($var).' {}</span>
+                <span>'.get_class($var).' {</span>';
+        $str .= '<ul class="sub-ul">';
+
+        if(empty($methods)){
+            $str .= '<span>methods => NULL</span>';
+        }else{
+            $str .= '<span>methods => array('.count($methods).') {</span>
+                <ul class="sub-ul">';
+            foreach ($methods as $key => $vo){
+                $str .= makeLi($vo, $key, $unique);
+            }
+            $str .= '</ul><span>}</span>';
+        }
+        if(empty($properties)){
+            $str .= '<br/>
+                <span>properties => NULL</span>';
+        }else{
+            $str .= '<br/>
+                <span>properties => array('.count($properties).') {</span>
+                <ul class="sub-ul">';
+            foreach ($properties as $key => $property) {
+                $str .= makeLi($property, $key, $unique);
+            }
+            $str .= '</ul>
+                <span>}</span>';
+        }
+
+        $str .= '</ul>
+                <span class="ellipsis is-hide">...</span>
+                <span>}</span>
             </li>';
     }elseif (gettype($var) == 'NULL'){
-        $str = '<li>'.gettype($var).'</li>';
+//        $str = '<li>'.gettype($var).'</li>';
+        $str = '';
     }else{
         $str = '<li>';
         $str .= '<span class="icon'.$unique.'" data-icon="-"></span>';

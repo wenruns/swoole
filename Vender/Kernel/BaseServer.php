@@ -11,15 +11,21 @@ namespace Vender\Kernel;
 
 use Vender\Exceptions\Exception;
 
-abstract class Common
+abstract class BaseServer
 {
+    // 配置信息
     protected static $configs = [];
 
+    // 服务实例对象
+    protected static $_server = null;
+
+    // swoole类型
     protected static $_SWOOLE_TYPE = [
         'SWOOLE_PROCESS' => SWOOLE_PROCESS,
         'SWOOLE_BASE' => SWOOLE_BASE
     ];
 
+    // 协议集合
     protected static $_PROTOCOL = [
         'SWOOLE_SOCK_TCP' => SWOOLE_SOCK_TCP,
         'SWOOLE_SOCK_TCP6' => SWOOLE_SOCK_TCP6,
@@ -40,19 +46,45 @@ abstract class Common
             'protocol' => 'SWOOLE_SOCK_TCP',
         ]);
         self::$configs = array_merge(self::$configs, $configs);
+        self::$configs['swoole_type'] = self::getSwooleType(self::$configs['swoole_type']);
+        self::$configs['protocol'] = self::getProtocol(self::$configs['protocol']);
         $this->init(self::$configs);
     }
 
+    /**
+     * 初始化服务
+     * @param $configs
+     * @return mixed
+     */
     abstract public function init($configs);
 
-    abstract public function registerEvent($event, $func);
 
-    abstract public function getServer();
+    /**
+     * 注册事件
+     * @param $event
+     * @param $func
+     */
+    public function registerEvent($event, $func)
+    {
+        self::$_server->on($event, $func);
+    }
 
-    abstract public function run();
+    /**
+     * 获取服务实例
+     * @return null
+     */
+    public function getServer()
+    {
+        return self::$_server;
+    }
 
-    abstract public function stop();
 
+    /**
+     * 获取swoole类型
+     * @param string $swoole_type
+     * @return array|mixed
+     * @throws \Exception
+     */
     static public function getSwooleType($swoole_type = '')
     {
         if($swoole_type){
@@ -66,6 +98,12 @@ abstract class Common
         }
     }
 
+    /**
+     * 获取协议
+     * @param string $protocol
+     * @return array|mixed
+     * @throws \Exception
+     */
     static public function getProtocol($protocol = '')
     {
         if($protocol){

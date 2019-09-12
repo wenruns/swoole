@@ -7,12 +7,14 @@
  */
 
 return [
-    'env' => 'local',
-    'host' => '0.0.0.0',
-    'port' => 9502,
-    'swoole_type' => 'SWOOLE_BASE',
-    'protocol' => 'SWOOLE_SOCK_TCP',
-    'server_type' => 'websocket',
+    'env' => 'local', // 环境
+    'host' => '0.0.0.0', // 服务器主机
+    'port' => 9502,  // 服务器端口
+    'swoole_type' => 'SWOOLE_BASE', // 服务器类型 SWOOLE_BASE | SWOOLE_PROCESS
+    'protocol' => 'SWOOLE_SOCK_TCP', // 服务器协议 SWOOLE_SOCK_TCP | SWOOLE_SOCK_UDP | SWOOLE_SOCK_TCP6 | SWOOLE_SOCK_UDP6| UnixSocket Stream | Dgram
+    'server_type' => 'websocket', // 服务器类型  websocket | http_server | redis_server | default
+    'server_controller' => \Vender\Websocket::class, // 服务器控制器
+    'only_reload_taskworkrer' => false,  //
     'options' => [
         'backlog' => 128,   //listen backlog
         'worker_num' => 4, //指定启动的worker进程数。

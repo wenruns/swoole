@@ -28,7 +28,7 @@ class Server extends SwooleBase
 
     public function onConnect(SwooleServer $server, $fd, $reactor_id)
     {
-        echo "connect...\r\n";
+        echo "onConnect...\r\n";
     }
 
     public function onReceive(SwooleServer $server, $fd, $reactor_id, $data)

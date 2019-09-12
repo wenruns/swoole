@@ -57,3 +57,4 @@ const myWebsocket = function ({
     create();
 }
 
+export default myWebsocket;

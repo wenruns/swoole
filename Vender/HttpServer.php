@@ -14,7 +14,7 @@ use \Swoole\Http\Server;
 
 class HttpServer extends SwooleBase
 {
-    public function onWorkerStart(Server $server, int $worker_id)
+    public function onWorkerStart(Server $server, $worker_id)
     {
         echo "workerStart...[$worker_id]\r\n";
     }

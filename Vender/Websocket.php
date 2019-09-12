@@ -7,6 +7,9 @@
  */
 namespace Vender;
 
+use App\Controllers\Chat\MessageController;
+use App\Controllers\ManagerController;
+use http\Message;
 use \Vender\Kernel\SwooleBase;
 use \Swoole\Websocket\Server;
 use \Swoole\Websocket\Frame;
@@ -14,10 +17,28 @@ use \Swoole\Http\Request;
 
 class Websocket extends SwooleBase
 {
-
+    /**
+     * 启动worker子进程
+     */
     public function onWorkerStart()
     {
         echo "workerStart...\r\n";
+    }
+
+    /**
+     * @param $request
+     * @param $response
+     * 接收http请求
+     */
+    public function onRequest($request, $response)
+    {
+        $response->header('Content-Type', 'text/html;charset=utf-8');
+        if(is_file(PUBLIC_PATH.DS.'index.php')){
+            $res = include PUBLIC_PATH.DS.'index.php';
+            $response->end($res);
+        }else if(is_file(PUBLIC_PATH.DS.'index.html')){
+            $response->end(file_get_contents(PUBLIC_PATH.DS.'index.html'));
+        }
     }
 
     /**
@@ -30,27 +51,6 @@ class Websocket extends SwooleBase
         echo "open...\r\n";
     }
 
-
-    /**
-     * @param $request
-     * @param $response
-     * 接收http请求
-     */
-    public function onRequest($request, $response)
-    {
-        echo "request...\r\n";
-        $client = new \Swoole\Coroutine\Client(SWOOLE_SOCK_TCP);
-        $client->connect("127.0.0.1", 9502, 0.5);
-        //调用connect将触发协程切换
-        $client->send("hello world from swoole");
-        //调用recv将触发协程切换
-        $ret = $client->recv();
-        $response->header("Content-Type", "text/plain");
-        $response->end($ret);
-        $client->close();
-    }
-
-
     /**
      * @param Server $server
      * @param Frame $frame
@@ -59,8 +59,26 @@ class Websocket extends SwooleBase
     public function onMessage(Server $server, Frame $frame)
     {
         echo "message...[".$frame->data."]\r\n";
-        if($server->isEstablished($frame->fd)){
-            $server->push($frame->fd, $frame->data);
+        $data = json_decode($frame->data, true);
+        ManagerController::setUserPool($data['id'], $frame->fd);
+        switch ($data['type']){
+            case ManagerController::CHAT_TYPE_HELLO:
+                ManagerController::setUserInfo($data['id'], $data);
+                break;
+            case ManagerController::CHAT_TYPE_ROOM:
+                if(!in_array($data['id'], ManagerController::getChatPools())){
+                    ManagerController::setChatPool($data['id']);
+                }
+                MessageController::chatRoom($server, $data);
+                break;
+            case ManagerController::CHAT_TYPE_FRIEND:
+                break;
+            case ManagerController::CHAT_TYPE_ALL:
+                break;
+            default:
+                if($server->isEstablished($frame->fd)){
+                    $server->push($frame->fd, $frame->data);
+                }
         }
     }
 
@@ -73,6 +91,16 @@ class Websocket extends SwooleBase
     public function onClose(Server $server, int $fd, int $reactorId)
     {
         echo "close...\r\n";
+        $user_id = array_search($fd, ManagerController::getUserPools());
+        if(in_array($user_id, ManagerController::getChatPools())){
+            $info = ManagerController::getUserInfo($user_id);
+            MessageController::chatRoom($server, [
+                'type' => ManagerController::CHAT_TYPE_ROOM,
+                'id' => $user_id,
+                'msg' => $info['name'].'，已离开聊天室'
+            ]);
+        }
+        ManagerController::clear($user_id);
     }
 
     /**
